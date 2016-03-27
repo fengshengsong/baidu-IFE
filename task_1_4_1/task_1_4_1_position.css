@@ -1,24 +1,22 @@
+/*使用absolute和relative定位实现*/
+
 * {
 	margin: 0;
 	padding: 0;
 	font-family:  'Microsoft YaHei', Arial, sans-serif;
 }
 
-html {
+html,body{
 	height: 100%;
-}
-
-body {
-	height: 100%;
+	width: 100%;
 }
 
 #container {
 	position: relative;
 	background-color: white;
+	border: 1px solid #999;
 	width: 60%;
 	height: 100%;
-	border: 1px solid #999;
-	border-radius: 1px;
 }
 
 #center_rect {
@@ -30,7 +28,6 @@ body {
 	left:50%;
 	margin-top: -100px;
 	margin-left: -200px;
-	overflow: hidden;
 }
 
 #left_circle,#right_circle {

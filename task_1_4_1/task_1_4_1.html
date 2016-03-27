@@ -4,18 +4,24 @@
 <head>
 	<meta charset="utf-8" />
 	<title>task_1_4_1</title>
-	<link href="task_1_4_1.css" rel="stylesheet" />  
-	<!-- <link href="task_1_3_1_position.css" rel="stylesheet" />   -->
+	<!-- <link href="task_1_4_1_position.css" rel="stylesheet" />   -->
+	<link href="task_1_4_1_flex.css" rel="stylesheet" />  
 </head>
 
 <body>
 
 <div id="container">
-	<div id="center_rect">
+    <div id="center_rect">
 		<div id="left_circle"></div>
 	    <div id="right_circle"></div>
 	</div>
 </div>
 
+<script type="text/javascript">
+	var container = document.getElementById("container");
+	//为了防止出现滚动条，所以container高度设置为视窗高度减去上下border的高度
+	var height = document.body.clientHeight - 2;   
+	container.style.height = height+'px';
+</script>
 </body>
 </html>
