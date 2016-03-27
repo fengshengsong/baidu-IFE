@@ -20,7 +20,7 @@
 	padding-bottom: 40px;
 	background-color: #EEE;
 	height: auto;
-	/*overflow: auto;*/
+	min-width: 500px;
 }
 
 #left {
