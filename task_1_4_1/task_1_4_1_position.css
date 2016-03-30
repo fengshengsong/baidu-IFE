@@ -3,7 +3,6 @@
 * {
 	margin: 0;
 	padding: 0;
-	font-family:  'Microsoft YaHei', Arial, sans-serif;
 }
 
 html,body{
@@ -13,10 +12,14 @@ html,body{
 
 #container {
 	position: relative;
-	background-color: white;
-	border: 1px solid #999;
 	width: 60%;
 	height: 100%;
+	min-width: 500px;
+	background-color: white;
+	border: 1px solid #999;
+	/*设置padding和border不会增加元素的宽度*/
+	-webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 #center_rect {

@@ -1,12 +1,16 @@
+/*使用position定位实现三栏式布局*/
+
 * {
 	margin: 0;
 	padding: 0;
-	font-family:  'Microsoft YaHei', Arial, sans-serif;
+	font-family:  'Microsoft YaHei';
 }
 
 #container,#left,#right,#center,img {
 	border: 1px solid #999;
 	border-radius: 1px;
+	-webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 #left,#right,#center {
@@ -17,10 +21,11 @@
 #container {	
 	position: relative;
 	margin: 20px;
-	padding-bottom: 40px;
 	background-color: #EEE;
-	height: auto;
 	min-width: 500px;
+	padding: 20px;
+	/*若子元素使用absolute则设置min-height防止元素塌陷*/
+	min-height: 480px;
 }
 
 #left {
@@ -36,30 +41,33 @@
 
 #left h1 {
 	position: absolute;
+	display: inline-block;
 	font-size: 12px;
 	top: 20px;
-	left: 120px;
 }
 
 #right {
+	/*设置absolute会从文档流中脱离，父元素可能会塌陷*/
 	position: absolute;
 	top: 20px;
 	right: 20px;
 	width: 120px;
-	padding-bottom: 20px;
+	padding:10px 20px;
 }
 
 #right img {
-	margin: 20px 20px 0;
+	margin: 10px 0;
 }
 
 #center {
-	margin: 20px 160px 20px 240px;
-	padding: 20px;
+	margin-left: 220px;
+	margin-right: 140px;
+	padding:20px;
 }
 
 #center h1 {
 	font-size: 30px;
+	margin: 0;
 }
 
 #center p {
